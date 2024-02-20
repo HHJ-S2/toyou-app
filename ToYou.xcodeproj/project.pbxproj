@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		173D3BFF2B837F99009736E1 /* SendLetterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173D3BFE2B837F99009736E1 /* SendLetterView.swift */; };
 		175B6D7F2B7EE63900CEED72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175B6D7E2B7EE63900CEED72 /* AppDelegate.swift */; };
 		175B6D812B7EE63900CEED72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175B6D802B7EE63900CEED72 /* SceneDelegate.swift */; };
 		175B6D832B7EE63900CEED72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175B6D822B7EE63900CEED72 /* ViewController.swift */; };
 		175B6D882B7EE63900CEED72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 175B6D872B7EE63900CEED72 /* Assets.xcassets */; };
 		175B6D8B2B7EE63900CEED72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175B6D892B7EE63900CEED72 /* LaunchScreen.storyboard */; };
 		175B6D962B7F0F6700CEED72 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175B6D952B7F0F6700CEED72 /* MainView.swift */; };
+		175B6D992B7F2D4100CEED72 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175B6D982B7F2D4100CEED72 /* UIColor+Hex.swift */; };
+		175B6D9B2B7F2DE100CEED72 /* UIColor+FlatColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175B6D9A2B7F2DE100CEED72 /* UIColor+FlatColors.swift */; };
+		175B6D9D2B82D90F00CEED72 /* SendLetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175B6D9C2B82D90F00CEED72 /* SendLetterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		173D3BFE2B837F99009736E1 /* SendLetterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendLetterView.swift; sourceTree = "<group>"; };
 		175B6D7B2B7EE63900CEED72 /* ToYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		175B6D7E2B7EE63900CEED72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		175B6D802B7EE63900CEED72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		175B6D8A2B7EE63900CEED72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		175B6D8C2B7EE63900CEED72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		175B6D952B7F0F6700CEED72 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		175B6D982B7F2D4100CEED72 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		175B6D9A2B7F2DE100CEED72 /* UIColor+FlatColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+FlatColors.swift"; sourceTree = "<group>"; };
+		175B6D9C2B82D90F00CEED72 /* SendLetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendLetterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		175B6D7D2B7EE63900CEED72 /* ToYou */ = {
 			isa = PBXGroup;
 			children = (
+				175B6D972B7F2D3000CEED72 /* Helper */,
 				175B6D942B7EE72A00CEED72 /* Controllers */,
 				175B6D932B7EE72300CEED72 /* Views */,
 				175B6D922B7EE71B00CEED72 /* Models */,
@@ -79,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				175B6D952B7F0F6700CEED72 /* MainView.swift */,
+				173D3BFE2B837F99009736E1 /* SendLetterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -87,8 +97,18 @@
 			isa = PBXGroup;
 			children = (
 				175B6D822B7EE63900CEED72 /* ViewController.swift */,
+				175B6D9C2B82D90F00CEED72 /* SendLetterViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		175B6D972B7F2D3000CEED72 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				175B6D982B7F2D4100CEED72 /* UIColor+Hex.swift */,
+				175B6D9A2B7F2DE100CEED72 /* UIColor+FlatColors.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,8 +183,12 @@
 			files = (
 				175B6D832B7EE63900CEED72 /* ViewController.swift in Sources */,
 				175B6D962B7F0F6700CEED72 /* MainView.swift in Sources */,
+				175B6D9B2B7F2DE100CEED72 /* UIColor+FlatColors.swift in Sources */,
 				175B6D7F2B7EE63900CEED72 /* AppDelegate.swift in Sources */,
+				173D3BFF2B837F99009736E1 /* SendLetterView.swift in Sources */,
 				175B6D812B7EE63900CEED72 /* SceneDelegate.swift in Sources */,
+				175B6D9D2B82D90F00CEED72 /* SendLetterViewController.swift in Sources */,
+				175B6D992B7F2D4100CEED72 /* UIColor+Hex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
