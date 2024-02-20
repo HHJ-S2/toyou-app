@@ -10,9 +10,9 @@
 		175B6D7F2B7EE63900CEED72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175B6D7E2B7EE63900CEED72 /* AppDelegate.swift */; };
 		175B6D812B7EE63900CEED72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175B6D802B7EE63900CEED72 /* SceneDelegate.swift */; };
 		175B6D832B7EE63900CEED72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175B6D822B7EE63900CEED72 /* ViewController.swift */; };
-		175B6D862B7EE63900CEED72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175B6D842B7EE63900CEED72 /* Main.storyboard */; };
 		175B6D882B7EE63900CEED72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 175B6D872B7EE63900CEED72 /* Assets.xcassets */; };
 		175B6D8B2B7EE63900CEED72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 175B6D892B7EE63900CEED72 /* LaunchScreen.storyboard */; };
+		175B6D962B7F0F6700CEED72 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175B6D952B7F0F6700CEED72 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +20,10 @@
 		175B6D7E2B7EE63900CEED72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		175B6D802B7EE63900CEED72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		175B6D822B7EE63900CEED72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		175B6D852B7EE63900CEED72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		175B6D872B7EE63900CEED72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		175B6D8A2B7EE63900CEED72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		175B6D8C2B7EE63900CEED72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		175B6D952B7F0F6700CEED72 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,39 @@
 		175B6D7D2B7EE63900CEED72 /* ToYou */ = {
 			isa = PBXGroup;
 			children = (
+				175B6D942B7EE72A00CEED72 /* Controllers */,
+				175B6D932B7EE72300CEED72 /* Views */,
+				175B6D922B7EE71B00CEED72 /* Models */,
 				175B6D7E2B7EE63900CEED72 /* AppDelegate.swift */,
 				175B6D802B7EE63900CEED72 /* SceneDelegate.swift */,
-				175B6D822B7EE63900CEED72 /* ViewController.swift */,
-				175B6D842B7EE63900CEED72 /* Main.storyboard */,
 				175B6D872B7EE63900CEED72 /* Assets.xcassets */,
 				175B6D892B7EE63900CEED72 /* LaunchScreen.storyboard */,
 				175B6D8C2B7EE63900CEED72 /* Info.plist */,
 			);
 			path = ToYou;
+			sourceTree = "<group>";
+		};
+		175B6D922B7EE71B00CEED72 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		175B6D932B7EE72300CEED72 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				175B6D952B7F0F6700CEED72 /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		175B6D942B7EE72A00CEED72 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				175B6D822B7EE63900CEED72 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +151,6 @@
 			files = (
 				175B6D8B2B7EE63900CEED72 /* LaunchScreen.storyboard in Resources */,
 				175B6D882B7EE63900CEED72 /* Assets.xcassets in Resources */,
-				175B6D862B7EE63900CEED72 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				175B6D832B7EE63900CEED72 /* ViewController.swift in Sources */,
+				175B6D962B7F0F6700CEED72 /* MainView.swift in Sources */,
 				175B6D7F2B7EE63900CEED72 /* AppDelegate.swift in Sources */,
 				175B6D812B7EE63900CEED72 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +171,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		175B6D842B7EE63900CEED72 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				175B6D852B7EE63900CEED72 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		175B6D892B7EE63900CEED72 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +313,7 @@
 				INFOPLIST_FILE = ToYou/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -329,7 +345,7 @@
 				INFOPLIST_FILE = ToYou/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
