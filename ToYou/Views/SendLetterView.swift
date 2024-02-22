@@ -8,27 +8,34 @@
 import UIKit
 
 class SendLetterView: UIView {
+  var lineHeight: CGFloat = 24
+  
   private lazy var container: UIView = {
     let view = UIView()
     view.backgroundColor = .white
-    view.addSubview(letterTextViewWrapper)
+    view.addSubview(letterTextWrapperView)
     return view
   }()
   
-  lazy var letterTextViewWrapper: UIView = {
+  lazy var letterTextWrapperView: UIView = {
     let view = UIView()
     view.backgroundColor = UIColor.FlatColor.Gray.WhiteSmoke
+    view.addSubview(letterTextBoxView)
+    return view
+  }()
+  
+  lazy var letterTextBoxView: UIView = {
+    let view = UIView()
+    view.backgroundColor = .white
+    view.layer.borderColor = UIColor.FlatColor.Gray.Iron.cgColor
+    view.layer.borderWidth = 1
     view.addSubview(letterTextView)
     return view
   }()
   
   lazy var letterTextView: UITextView = {
     let textView = UITextView();
-    textView.textContainerInset = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16);
-    textView.layer.borderWidth = 1
-    textView.layer.borderColor = UIColor.FlatColor.Gray.Iron.cgColor
-    textView.backgroundColor = .white
-    textView.font = UIFont.systemFont(ofSize: 20)
+    textView.font = UIFont.systemFont(ofSize: 18)
     
     // Placeholder 셋팅
     textView.text = "메세지를 입력하세요"
@@ -38,6 +45,7 @@ class SendLetterView: UIView {
     // 수정 제안 비활성
     textView.autocorrectionType = .no
     textView.spellCheckingType = .no
+    
     return textView
   }()
   
@@ -61,20 +69,27 @@ class SendLetterView: UIView {
       container.bottomAnchor.constraint(equalTo: self.bottomAnchor)
     ])
     
-    letterTextViewWrapper.translatesAutoresizingMaskIntoConstraints = false
+    letterTextWrapperView.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      letterTextViewWrapper.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-      letterTextViewWrapper.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor),
-      letterTextViewWrapper.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor),
-      letterTextViewWrapper.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+      letterTextWrapperView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+      letterTextWrapperView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+      letterTextWrapperView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+      letterTextWrapperView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+    ])
+    
+    letterTextBoxView.translatesAutoresizingMaskIntoConstraints = false
+    NSLayoutConstraint.activate([
+      letterTextBoxView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
+      letterTextBoxView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+      letterTextBoxView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20)
     ])
     
     letterTextView.translatesAutoresizingMaskIntoConstraints = false
     NSLayoutConstraint.activate([
-      letterTextView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),
-      letterTextView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-      letterTextView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-//      letterTextView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -20)
+      letterTextView.topAnchor.constraint(equalTo: self.letterTextBoxView.topAnchor, constant: 16),
+      letterTextView.leadingAnchor.constraint(equalTo: self.letterTextBoxView.leadingAnchor, constant: 16),
+      letterTextView.trailingAnchor.constraint(equalTo: self.letterTextBoxView.trailingAnchor, constant: -16),
+      letterTextView.bottomAnchor.constraint(equalTo: self.letterTextBoxView.bottomAnchor, constant: -16)
     ])
   }
 }

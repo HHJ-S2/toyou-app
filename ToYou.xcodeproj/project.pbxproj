@@ -17,6 +17,8 @@
 		175B6D992B7F2D4100CEED72 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175B6D982B7F2D4100CEED72 /* UIColor+Hex.swift */; };
 		175B6D9B2B7F2DE100CEED72 /* UIColor+FlatColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175B6D9A2B7F2DE100CEED72 /* UIColor+FlatColors.swift */; };
 		175B6D9D2B82D90F00CEED72 /* SendLetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175B6D9C2B82D90F00CEED72 /* SendLetterViewController.swift */; };
+		17826DEB2B85799A00309AEE /* DecolateLetterTextBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17826DEA2B85799A00309AEE /* DecolateLetterTextBoxView.swift */; };
+		17826DED2B85824800309AEE /* DecorateLetterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17826DEC2B85824800309AEE /* DecorateLetterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		175B6D982B7F2D4100CEED72 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		175B6D9A2B7F2DE100CEED72 /* UIColor+FlatColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+FlatColors.swift"; sourceTree = "<group>"; };
 		175B6D9C2B82D90F00CEED72 /* SendLetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendLetterViewController.swift; sourceTree = "<group>"; };
+		17826DEA2B85799A00309AEE /* DecolateLetterTextBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecolateLetterTextBoxView.swift; sourceTree = "<group>"; };
+		17826DEC2B85824800309AEE /* DecorateLetterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecorateLetterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 			children = (
 				175B6D952B7F0F6700CEED72 /* MainView.swift */,
 				173D3BFE2B837F99009736E1 /* SendLetterView.swift */,
+				17826DEA2B85799A00309AEE /* DecolateLetterTextBoxView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 			children = (
 				175B6D822B7EE63900CEED72 /* ViewController.swift */,
 				175B6D9C2B82D90F00CEED72 /* SendLetterViewController.swift */,
+				17826DEC2B85824800309AEE /* DecorateLetterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,8 +193,10 @@
 				175B6D7F2B7EE63900CEED72 /* AppDelegate.swift in Sources */,
 				173D3BFF2B837F99009736E1 /* SendLetterView.swift in Sources */,
 				175B6D812B7EE63900CEED72 /* SceneDelegate.swift in Sources */,
+				17826DEB2B85799A00309AEE /* DecolateLetterTextBoxView.swift in Sources */,
 				175B6D9D2B82D90F00CEED72 /* SendLetterViewController.swift in Sources */,
 				175B6D992B7F2D4100CEED72 /* UIColor+Hex.swift in Sources */,
+				17826DED2B85824800309AEE /* DecorateLetterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

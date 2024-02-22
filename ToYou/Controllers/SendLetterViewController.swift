@@ -20,6 +20,12 @@ class SendLetterViewController: UIViewController {
     
     mainView.letterTextView.delegate = self
     
+    // 네비게이션 바 버튼 세팅
+    let rightTextButton = UIBarButtonItem(title: "다음", style: .plain, target: self, action: #selector(textButtonTapped))
+    
+    navigationItem.leftBarButtonItem?.title = "이전"
+    navigationItem.rightBarButtonItem = rightTextButton
+    
     setNotification()
     setUI()
   }
@@ -27,6 +33,14 @@ class SendLetterViewController: UIViewController {
   deinit {
     // 옵저버 해제
     NotificationCenter.default.removeObserver(self)
+  }
+  
+  @objc func textButtonTapped() {
+    let nextVC = DecorateLetterViewController()
+    
+    nextVC.letterText = mainView.letterTextView.text
+    
+    self.show(nextVC, sender: nil)
   }
   
   private func setNotification() {
@@ -45,7 +59,7 @@ class SendLetterViewController: UIViewController {
   }
   
   private func setUI() {
-    sendLetterTextViewBottomConstraint = mainView.letterTextView.bottomAnchor.constraint(equalTo: mainView.safeAreaLayoutGuide.bottomAnchor, constant: -20)
+    sendLetterTextViewBottomConstraint = mainView.letterTextBoxView.bottomAnchor.constraint(equalTo: mainView.safeAreaLayoutGuide.bottomAnchor, constant: -20)
     NSLayoutConstraint.activate([sendLetterTextViewBottomConstraint])
   }
   
