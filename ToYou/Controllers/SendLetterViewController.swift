@@ -9,7 +9,12 @@ import UIKit
 
 class SendLetterViewController: UIViewController {
   private let mainView = SendLetterView()
+  
   var sendLetterTextViewBottomConstraint: NSLayoutConstraint!
+  var canNavigate = false
+  
+  // 네비게이션 바 버튼 세팅
+  var rightTextButton = UIBarButtonItem()
   
   override func loadView() {
     view = mainView
@@ -20,11 +25,13 @@ class SendLetterViewController: UIViewController {
     
     mainView.letterTextView.delegate = self
     
-    // 네비게이션 바 버튼 세팅
-    let rightTextButton = UIBarButtonItem(title: "다음", style: .plain, target: self, action: #selector(textButtonTapped))
-    
-    navigationItem.leftBarButtonItem?.title = "이전"
+    rightTextButton.tintColor = UIColor.FlatColor.Gray.IronGray
     navigationItem.rightBarButtonItem = rightTextButton
+    
+    rightTextButton.title = "Next"
+    rightTextButton.style = .plain
+    rightTextButton.target = self
+    rightTextButton.action = #selector(textButtonTapped)
     
     setNotification()
     setUI()
@@ -39,6 +46,9 @@ class SendLetterViewController: UIViewController {
     let nextVC = DecorateLetterViewController()
     
     nextVC.letterText = mainView.letterTextView.text
+    mainView.letterTextView.resignFirstResponder()
+    
+    guard canNavigate else { return }
     
     self.show(nextVC, sender: nil)
   }
@@ -70,7 +80,6 @@ class SendLetterViewController: UIViewController {
     }
     
     let keyboardFrameHeight = keyboardFrame.size.height
-    
     sendLetterTextViewBottomConstraint.constant = -(keyboardFrameHeight)
   }
   
@@ -91,6 +100,18 @@ extension SendLetterViewController: UITextViewDelegate {
     if textView.text.isEmpty {
       textView.text = "메세지를 입력하세요"
       textView.textColor = UIColor.FlatColor.Gray.Iron
+    }
+  }
+  
+  func textViewDidChange(_ textView: UITextView) {
+    let text = textView.text
+    
+    if text != "" && textView.textColor != UIColor.FlatColor.Gray.Iron {
+      canNavigate = true
+      rightTextButton.tintColor = .systemBlue
+    } else {
+      canNavigate = false
+      rightTextButton.tintColor = UIColor.FlatColor.Gray.IronGray
     }
   }
   

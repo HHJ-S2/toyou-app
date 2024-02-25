@@ -8,8 +8,6 @@
 import UIKit
 
 class SendLetterView: UIView {
-  var lineHeight: CGFloat = 24
-  
   private lazy var container: UIView = {
     let view = UIView()
     view.backgroundColor = .white

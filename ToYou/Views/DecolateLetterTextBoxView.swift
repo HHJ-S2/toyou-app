@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LetterTextView: UITextView {
+class DecolateLetterTextBoxView: UITextView {
   
   var lineHeight: CGFloat = 13.8
   
